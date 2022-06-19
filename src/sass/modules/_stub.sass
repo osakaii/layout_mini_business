@@ -1,0 +1,43 @@
+.stub 
+    position: relative
+    padding: 100px 0
+    +flex(column, center, center)
+    gap: 2rem
+
+    & img
+        width: 500px
+        animation: moveCube 5s linear infinite
+
+    & h1 
+        letter-spacing: 1px
+        +flex('row', center, flex-end)
+
+    & span
+        display: inline-block
+        width: 3ch
+        overflow: hidden
+        font-family: "Monospace"
+        font-size: 45px
+        animation: moveText 7s steps(3) infinite
+
+@keyframes moveCube
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(-20px)
+    // 66%
+    //     transform: translateY(-10px)
+    100%
+        transform: translateY(0)
+        
+@keyframes moveText
+    0% 
+        width: 0
+    30%
+        width: 3ch
+    50%
+        width: 0
+    80%
+        width: 3ch
+    100%
+        width: 0

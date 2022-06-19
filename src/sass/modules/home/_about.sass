@@ -1,0 +1,44 @@
+.home-about
+    position: relative
+    padding: 100px 0 140px
+
+    &__body
+        position: relative
+        
+    &__title
+        position: relative
+        font-size: $fs-1
+
+    &__subtitle
+        line-height: 26px
+        font-size: $fs-3
+
+    &__img
+        width: 41%
+
+    &__btn
+        font-size: $fs-4
+        padding: 15px 32px 13px 
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0  
+        background-image: url('../assets/icons/aboutLines.svg')
+        width: 100%
+        height: 100%
+        background-position: 45% 88px
+        background-repeat: no-repeat
+        background-size: 55% 88%
+
+    &__title::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0    
+        background-image: url('../assets/icons/titlebgicon.svg')
+        width: 140px
+        height: 155px
+        transform: translateY(-50%) translateX(-12%)
+        z-index: -1

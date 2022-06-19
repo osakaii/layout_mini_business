@@ -1,0 +1,11 @@
+.header__mob-nav
+    .header__mob-nav-wrapper
+        .header__mob-nav-body
+            button(class="hamburger", type="button")
+                img(src="./assets/icons/close.svg", alt="close")
+            .header__mob-nav-icon 
+                img(src= imgMiniCube, alt="miniCube")
+            ul.header__mob-nav-list
+                +navListItem(navbarItems, 'header__mob-nav-item')
+            ul.header__mob-icon-list.d-flex.gap-5.mt-4
+                +iconListItems('header__mob-icon-item', "#282C37")

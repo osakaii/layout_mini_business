@@ -1,0 +1,15 @@
+extends ../template.pug
+block content
+    section.home-about
+        .my-container.container
+            include ../includes/home/about
+        
+    section.home-questes
+        .my-container.container
+            .home-questes__body 
+                ul.home-questes__list.row.justify-content-center.px-md-5.p-0
+                    +navListItem(homeQuestesItems, 'home-questes__item')
+
+    section.home-services 
+        .my-container.container
+            include ../includes/home/services

@@ -1,0 +1,73 @@
+.hamburger 
+    padding: 15px 15px
+    display: inline-block
+    cursor: pointer
+    transition-property: opacity, filter
+    transition-duration: 0.15s
+    transition-timing-function: linear
+    font: inherit
+    color: inherit
+    text-transform: none
+    background-color: transparent
+    border: 0
+    margin: 0
+    overflow: visible 
+    &:hover 
+        opacity: 0.7 
+    & .burger-active:hover 
+        opacity: 0.7 
+    & .burger-active &-inner,
+    & .burger-active &-inner::before,
+    & .burger-active &-inner::after 
+        background-color: #000 
+    &-box 
+        width: 40px
+        height: 24px
+        display: inline-block
+        position: relative 
+    &-inner 
+        display: block
+        top: 50%
+        margin-top: -2px 
+    &-inner, &-inner::before, &-inner::after 
+        width: 40px
+        height: 4px
+        background-color: $main-text-color
+        border-radius: 4px
+        position: absolute
+        transition-property: transform
+        transition-duration: 0.15s
+        transition-timing-function: ease 
+    &-inner::before, &-inner::after 
+        content: ""
+        display: block 
+    &-inner::before 
+        top: -10px 
+    &-inner::after 
+        bottom: -10px 
+
+    &--emphatic 
+        overflow: hidden
+    &--emphatic &-inner 
+        transition: background-color 0.125s 0.175s ease-in
+    &--emphatic &-inner::before 
+        left: 0
+        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in
+    &--emphatic &-inner::after 
+        top: 10px
+        right: 0
+        transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in
+    &--emphatic.burger-active &-inner 
+        transition-delay: 0s
+        transition-timing-function: ease-out
+        background-color: transparent !important
+    &--emphatic.burger-active &-inner::before 
+        left: -80px
+        top: -80px
+        transform: translate3d(80px, 80px, 0) rotate(45deg)
+        transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+    &--emphatic.burger-active &-inner::after 
+        right: -80px
+        top: -80px
+        transform: translate3d(-80px, 80px, 0) rotate(-45deg)
+        transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)

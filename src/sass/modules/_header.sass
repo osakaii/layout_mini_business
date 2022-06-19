@@ -1,0 +1,76 @@
+.header
+    box-shadow: 0 1px 5px rgba(#7c7b7b, .1)
+
+    &__navbar
+        padding: 21px 0
+
+    &__navbar-list
+        display: flex
+        justify-content: space-between
+
+    &__navbar-list a
+        +font('Lato', 600, $fs-5)
+        text-transform: uppercase
+        color: $main-text-color
+        letter-spacing: .5px
+
+    &__icon-list
+        display: flex
+        justify-content: end
+        gap: 24px
+
+    &__burger
+        display: none
+        & button 
+            margin-left: auto
+
+    &__mob-nav
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: $white-color
+        transform: translateX(110%)
+        z-index: 10
+        transition: .3s
+        overflow-y: scroll
+        display: none
+
+        &--active
+            transform: translateX(0)
+        
+        &-wrapper
+            position: relative
+            width: 100%
+            min-height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            margin: 0 auto
+
+        &-body
+            +flex(column, center, center)
+            width: 100%
+            gap: 80px
+            margin: 50px 0
+
+        &-body > button
+            position: absolute
+            top: 24px
+            left: 28px
+
+        &-body > *
+            padding: 0
+            margin: 0
+
+        &-icon > img
+            width: 64px
+
+        &-list
+            +flex(column, center, center)
+            gap: 45px
+            
+        &-item-link
+            +font('Lato', 500, $fs-4)
+            text-transform: uppercase

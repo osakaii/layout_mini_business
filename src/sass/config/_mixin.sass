@@ -1,0 +1,17 @@
+=mediaMinW($minW)
+    @media screen and (min-width: $minW)
+        @content
+=mediaMaxW($minW)
+    @media screen and (max-width: $minW)
+        @content
+
+=font($famili: "Lato", $weight: 400, $fs: 17px)
+    font-family: $famili
+    font-weight: $weight
+    font-size: $fs
+
+=flex($dir: row, $jc, $ai)
+    display: flex
+    flex-direction: $dir
+    justify-content: $jc
+    align-items: $ai

@@ -1,0 +1,60 @@
++mediaMaxW(768px)
+    .header
+        &__navbar-list, 
+        &__icon-list
+            display: none
+        &__mob-nav
+            display: block
+        &__burger
+            display: flex
+
+    .home
+        &-about
+            padding: 70px 0 100px
+
+            &::before
+                background-image: url('../assets/icons/titleMiniLine.svg')
+                background-position: 46% 25px
+                background-size: 56% 90%
+
+            &__title
+                font-size: $fs-2-5
+                margin-bottom: 0
+
+                &-block
+                    gap: .7rem !important
+
+                & span
+                    font-size: $fs-3-5 !important
+
+            &__subtitle
+                font-size: $fs-5
+                line-height: 16px
+ 
+        &-questes
+            padding-bottom: 0
+            &__item a
+                font-size: $fs-4
+                gap: 30px
+            
+        &-services
+            padding-bottom: 42px
+
+            &__title-block::before
+                background-image: url('../assets/icons/rectAndLineMini.svg')
+                transform: translateY(-38%)
+
+            &__list
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+            
+            &__item
+                padding: 47px 50px
+                width: 48%
+
+                & a span
+                    width: 100%
+
+            &__item:nth-child(2) a 
+                flex-direction: column

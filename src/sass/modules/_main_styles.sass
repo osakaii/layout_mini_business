@@ -1,0 +1,49 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    color: $main-text-color
+a
+    text-decoration: none
+
+h1, h2, button
+    font-family: 'Montserrat'
+    font-weight: 700
+    text-transform: uppercase
+
+ul, ol
+    list-style: none
+
+input, button
+    outline: none
+    border: none !important
+
+
+.green-btn
+    background: $btn-green-color
+    color: $white-color
+    transition: .2s
+    &:hover
+        background: $btn-green-active
+        color: $white-color
+
+.icon-link-whatsapp:hover path
+    fill: #00FF79
+
+.icon-link-telegram:hover path
+    fill: #0094D2
+
+.icon-link-facebook:hover path
+    fill: #435BAA
+
+
+
++mediaMaxW(767px)
+    *::before
+        display: none
+    .home-about
+        &__img 
+            width: 70% !important
+        &__title-block
+            text-align: center
+    
